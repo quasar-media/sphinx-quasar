@@ -1,0 +1,28 @@
+[project]
+name = "sphinx-quasar"
+authors = [{name = "Auri", email = "me@aurieh.me"}]
+readme = "README.rst"
+dependencies = ["Sphinx ~= 5.1"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Documentation",
+]
+requires-python = ">=3.9"
+dynamic = ["version", "description"]
+
+[project.urls]
+Code = "https://github.com/quasar-media/sphinx-quasar"
+
+[project.entry-points."pygments.styles"]
+bw_quasar = "quasar.sphinx.pygments.styles:BlackWhiteStyle"
+
+[tool.flit.module]
+name = "quasar.sphinx"
+
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
